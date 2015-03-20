@@ -6,6 +6,6 @@ Package.new(
 	components: ['scriptUK.rb'], 
 	description: 'A super quest system with custom trigger',
 	dependancies: {
-		'custom-database': vsn_each
+		'custom-database' => vsn_each,
 	}
 )
