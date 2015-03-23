@@ -5,5 +5,5 @@ Package.new(
 	authors: {'Nuki' => 'xaviervdw@gmail.com'},
 	components: ['script.rb'],
 	description: 'Provide a full customisable text engine',
-  dependancies: ["standardize-RGSS"]
+  dependancies: ["standardize-rgss"]
 )
