@@ -493,14 +493,14 @@ module Quest
   #--------------------------------------------------------------------------
   def need_confirmation?(i)
     id = idl(i)
-    successed?(id) && !get(id).confirmed
+    succeeded?(id) && !get(id).confirmed
   end
   #--------------------------------------------------------------------------
   # * Confirme une quête
   #--------------------------------------------------------------------------
   def confirm(i)
     id = idl(i)
-    return unless need_confirmation(id)
+    return unless need_confirmation?(id)
     get(id).confirm
   end
   #--------------------------------------------------------------------------
