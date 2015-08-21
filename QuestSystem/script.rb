@@ -1037,7 +1037,7 @@ class Scene_QuestShop < Scene_MenuBase
   #--------------------------------------------------------------------------
   def prepare(quests)
     @q = quests
-    q = Array.new(quests.length + 1){|i|Static_Quest[Quest.idl(i)]}.compact
+    q = @q.map {|i| Static_Quest[Quest.idl(i)] }.compact
     @quests = q.select{|quest| quest.cost > 0}
   end
   #--------------------------------------------------------------------------
