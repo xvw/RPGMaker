@@ -58,6 +58,7 @@ class Slider
     @button.bitmap.fill_rect(0, 0, @height, @height, @colorB)
     self.x = @x
     self.y = @y
+    @bg.z = @button.z = 9999
   end
 
   #--------------------------------------------------------------------------
@@ -213,6 +214,7 @@ class Tone_Tester
     @blul.x, @blul.y = @blu.x, 12
     @gral = Sprite.new
     @gral.x, @gral.y = @gra.x, 12
+    @redl.z = @grel.z = @blul.z = @gral.z = 9999
     @gral.bitmap = @redl.bitmap.clone
     @blul.bitmap = @redl.bitmap.clone
     @grel.bitmap = @redl.bitmap.clone
@@ -256,6 +258,7 @@ class Tone_Tester
     @button.bitmap.font.size = 16
     @button.bitmap.draw_text(0,0,100,16,"Save", 1)
     @button.y = 32
+    @bg.z = @button.z = 9999
   end
   #--------------------------------------------------------------------------
   # * Update
@@ -286,6 +289,9 @@ class Tone_Tester
     blu = @blu.value - 255
     gra = @gra.value
     $game_map.screen.tone.set(red, gre, blu, gra)
+    $game_map.parallaxes.each do |parallax|
+      parallax.tone.set(red, gre, blu, gra)
+    end
   end
   #--------------------------------------------------------------------------
   # * Update label
@@ -312,6 +318,9 @@ class Tone_Tester
     $game_system.menu_disabled = @menu
     @disposed = true
     $game_map.screen.tone.set(@tone)
+    $game_map.parallaxes.each do |parallax|
+      parallax.tone.set(@tone)
+    end
     @bg.dispose
     @button.dispose
     [@red, @gre, @blu, @gra].collect(&:dispose)
