@@ -289,6 +289,9 @@ class Tone_Tester
     blu = @blu.value - 255
     gra = @gra.value
     $game_map.screen.tone.set(red, gre, blu, gra)
+    $game_map.parallaxes.each do |parallax|
+      parallax.tone.set(red, gre, blu, gra)
+    end
   end
   #--------------------------------------------------------------------------
   # * Update label
@@ -315,6 +318,9 @@ class Tone_Tester
     $game_system.menu_disabled = @menu
     @disposed = true
     $game_map.screen.tone.set(@tone)
+    $game_map.parallaxes.each do |parallax|
+      parallax.tone.set(@tone)
+    end
     @bg.dispose
     @button.dispose
     [@red, @gre, @blu, @gra].collect(&:dispose)
