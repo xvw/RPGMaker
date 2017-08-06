@@ -269,6 +269,8 @@ class Static_Quest < Static::Table
   poly        :label
   poly        :preserved_success
   poly        :preserved_fail
+  poly        :success_trigger
+  poly        :fail_trigger
   #--------------------------------------------------------------------------
   # * Vérifie si une quête est lançable
   #--------------------------------------------------------------------------
@@ -315,7 +317,7 @@ class Game_Quest < Dynamic::Table
   def finish_with_success
     self.finished = true
     self.successed = true
-    self.static.end_action.call
+    self.static.end_action.call(true)
     if !self.static.need_confirmation
       self.confirm 
       Game_Quest.delete(self.quest_id)  if self.static.repeatable
@@ -342,7 +344,7 @@ class Game_Quest < Dynamic::Table
   def finish_with_fail
     self.finished = true
     self.successed = false
-    self.static.end_action.call
+    self.static.end_action.call(false)
     if self.static.repeatable
       Game_Quest.delete(self.quest_id)
     end
