@@ -269,8 +269,6 @@ class Static_Quest < Static::Table
   poly        :label
   poly        :preserved_success
   poly        :preserved_fail
-  poly        :success_trigger
-  poly        :fail_trigger
   #--------------------------------------------------------------------------
   # * Vérifie si une quête est lançable
   #--------------------------------------------------------------------------
