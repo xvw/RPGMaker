@@ -8,7 +8,7 @@ N'hésitez pas à collaborer au moyen de __commits__.
 Pour me contacter : `xavier.vdw_AROBAZ_gmail.com` ou alors via une issue [ICI](https://github.com/xvw/RPGMaker/issues/1)
 
 
-##Liste des outils
+## Liste des outils
 Liste des outils/logiciels développés pour la suite RPG Maker, d'Enterbrain. Tous les scripts présentés ici sont libres (sauf exceptions, spécifiées sur la page du script).
 * [**VXAce**: Objets uniques](https://github.com/xvw/RPGMaker/tree/master/ObjetsUniques) - Donne une identité propre aux objets
 * [**VXAce**: Extension des notes](https://github.com/xvw/RPGMaker/tree/master/ExtensionNotes) - Manipule du XML-Like dans les notes de la BDD
