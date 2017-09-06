@@ -3,21 +3,21 @@
 
 Ce script a pour objectif de proposer une tentative raisonnable de standardiser certaines fonctionnalités du RGSS pour les rendre "cross-version" et que l'écriture de scripts multi-platforme soit plus aisé.
 
-##Installation
+## Installation
 Copiez le [script](https://github.com/nukiFW/RPGMaker/blob/master/StandardizeRGSS/script.rb) dans votre éditeur de script au dessus de Main, dans la rubrique Materials. Vous pouvez lui attribuer un emplacement réservé. Et le nommer comme vous l'entendez. Personnellement, j'ai choisi le nom StandardRGSS (original :P !).  
 **Idéalement, placez ce script au dessus de tous les autres des scripts customs**
 
 
-##Contributeurs
+## Contributeurs
 
 *    Nuki 
 *    Grim (Implémentation de la console)
 *    Zeus81 (Aide divers)
 
-##Fonctions proposées par le script 
+## Fonctions proposées par le script 
 Voici la liste des fonctions proposées.
 
-###RPGMAKER
+### RPGMAKER
 Liste des fonctions relatives au module RPGMAKER.
 
 *    `RPGMAKER.version`  
@@ -33,7 +33,7 @@ Liste des fonctions relatives au module RPGMAKER.
 *    `RPGMAKER.xp?`  
      Retourne `true` si la version est RPG MAKER XP, `false` sinon. 
 
-###RGSS
+### RGSS
 Fonctions utiles et récurrentes
 
 *    `RGSS.from_editor?`  
@@ -45,7 +45,7 @@ Fonctions utiles et récurrentes
 *    `RGSS.handle`  
      Retourne le `handle` de la fenêtre de jeu (usage pour les `Win32API's`)
 
-###SceneManager
+### SceneManager
 Ce module est un ajout uniquement pour VX et XP qui offre un traitement similaire à VXAce pour les scènes.
 
 *    `SceneManager.scene`  
@@ -69,7 +69,7 @@ Ce module est un ajout uniquement pour VX et XP qui offre un traitement similair
 *    `SceneManager.exit`  
      Quitte le jeu.
 
-###Ajout divers
+### Ajout divers
 
 *    `Graphics.width` retourne 640 pour RMXP
 *    `Graphics.height` retourne 480 pour RMXP
@@ -77,9 +77,9 @@ Ce module est un ajout uniquement pour VX et XP qui offre un traitement similair
 Ajout de divers données dans la classe Font qui ne change rien mais propose mais prévient des bogues.
 
 
-###Ajout de classes pour RMXP
+### Ajout de classes pour RMXP
 
 *    `Game_Interpreter` : Ajout de la classe comme Alias de `Interpreter`
 
-###Support de la console VXAce sur XP et VX
+### Support de la console VXAce sur XP et VX
 Cette fonction est activable ou désactivable au tout début du script. Elle permet d'afficher (en mode test) une console de déboguage comme sur RPG Maker VX Ace.
