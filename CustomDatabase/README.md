@@ -197,7 +197,7 @@ Pour la modification des champs, il suffit d'accèder au champ et d'en modifier 
 
 `Game_Quest[10].finished = true`, la quête dynamique dont l'ID est 10 aura l'attribut `finished` mis à `true`. Rien de bien compliqué.
 
-###Mapping de la base de données standard
+### Mapping de la base de données standard
 Histoire de faire profiter de la très agréable syntaxe du système de base de données à toutes les données RM, le script construit des tables (statiques) référentes à la base de données standard de RPG Maker. Elles sont préfixées de `VXACE_` et leur nom est en majuscule : 
 
 *    `VXACE_ACTOR`
