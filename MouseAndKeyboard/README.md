@@ -4,17 +4,17 @@
 Aie, encore un, un script pour le clavier et la souris. Celui de l'Event Extender sera probablement plus intéressant et plus complet, cependant, cette version
 sera amenée à évoluer.
 
-###Objectif
+### Objectif
 Pour être honnête, c'est avant tout pour m'exercer avec les API's de Windows que j'ai développé ce script. Mais aussi car je voudrais, dans un futur écrire certains scripts qui dépenderaient d'un support de la souris. C'est donc pour 
 cette raison qu'est né ce script.
 
-###Licence 
+### Licence 
 Aucune, vous en faites l'usage que vous voulez.
 
-###Installation
+### Installation
 Copiez le [script](https://github.com/nukiFW/RPGMaker/blob/master/MouseAndKeyboard/script.rb) dans votre éditeur de script Au dessus de Main, dans la rubrique Materials. Vous pouvez lui attribuer un emplacement réservé. Et le nommer comme vous l'entendez. Personnellement, j'ai choisi le nom Keyboard & mouse (original :P !)
 
-###Gestion du clavier
+### Gestion du clavier
 Les premières "fonctions" permettent de détecter la pression d'une touche selon des comportemments différents. 
 
 *   `Keyboard.trigger?(key)` Renverra `true` a l'instant où une touche (key) est enfoncée. (`false` sinon).
@@ -22,7 +22,7 @@ Les premières "fonctions" permettent de détecter la pression d'une touche selo
 *   `Keyboard.repeat?(key)` Renverra `true` tant que la touche (key) est pressée successivement. (`false` sinon).
 *   `Keyboard.release?(key)` Renverra `true` à l'instant où la touche (key) est relâchée. (`false` sinon).
 
-####Liste des touches prises en charge
+#### Liste des touches prises en charge
 
 Voici la liste des touches passables (à la place de `key`) aux fonctions précédentes
 
@@ -34,7 +34,7 @@ __Touches RPG Maker__
 
 En effet, vous pouvez utiliser les touches RM dans les fonctions.
 
-####Etats du clavier
+#### Etats du clavier
 
 Il existe aussi des fonctions qui testent l'état du clavier : 
 
@@ -48,7 +48,7 @@ effectuée (`false` sinon). Elle peut aussi s'utiliser sans touche `Keyboard.ctr
 *    `Keyboard.scroll_lock?` Qui renvoi `true` si le clavier est en `Scroll verouillé` (`false` sinon).
 
 
-###Gestion de la souris
+### Gestion de la souris
 Les premières "fonctions" permettent de détecter la pression d'une touche selon des comportemments différents. 
 
 *   `Mouse.trigger?(key)` Renverra `true` a l'instant où une touche (key) est enfoncée. (`false` sinon).
@@ -56,13 +56,13 @@ Les premières "fonctions" permettent de détecter la pression d'une touche selo
 *   `Mouse.repeat?(key)` Renverra `true` tant que la touche (key) est pressée successivement. (`false` sinon).
 *   `Mouse.release?(key)` Renverra `true` à l'instant où la touche (key) est relâchée. (`false` sinon).
 
-####Liste des touches prises en charge
+#### Liste des touches prises en charge
 
 Voici la liste des touches passables (à la place de `key`) aux fonctions précédentes
 
 `:mouse_left` `:mouse_right` `:mouse_center` `:mouse_x1` `:mouse_x2`
 
-####Tracker la position de la souris
+#### Tracker la position de la souris
 Ces fonctions permettent d'avoir des informations sur la position de la souris (relative à la fenêtre de jeu).
 
 *     `Mouse.x` Renvoi un entier correspondant à l'axe x de la souris
@@ -72,7 +72,7 @@ Ces fonctions permettent d'avoir des informations sur la position de la souris (
 *     `Mouse.over_window?` Renvoi `true` si la souris est sur l'écran, `false` sinon
 *     `Mouse.hover_rect?(rect)` Renvoi `true` si la souris est sur le `Rect` passé en argument, `false` sinon
 
-####Afficher/Masquer le curseur du système
+#### Afficher/Masquer le curseur du système
 Il est possible que l'on veuille se servir des coordonnées de la souris pour faire un curseur personnalisé. 
 En effet, il suffit de placer une image (ou un Sprite) aux coordonnées x/y de la souris. Il existe pour ça une 
 commande qui masque le curseur de Windows sur la fenêtre du jeu RPG Maker:
