@@ -1,0 +1,10 @@
+{
+  "name": "nuki-buzzer",
+  "description": "Golden-sun like buzzer (for events and followers)",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": {
+    "xvw": "xaviervdw@gmail.com"
+  },
+  "components": ["script.rb"]
+}
