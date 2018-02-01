@@ -8,12 +8,20 @@ module Item_Config
   #--------------------------------------------------------------------------
   # * Défini si les objets sont groupés ou non (dans leur affichage)
   #--------------------------------------------------------------------------
-  GROUPED = false
+  GROUPED = if defined?(FORGE::NUKI_ITEM_UNIQ::GROUPED)
+    FORGE::NUKI_ITEM_UNIQ::GROUPED
+  else
+    false
+  end
   #--------------------------------------------------------------------------
   # * Si les objets ne sont pas groupés, le nombre d'objets maximum portables
   # (Par sac)
   #--------------------------------------------------------------------------
-  MAX = 999
+  MAX = if defined?(FORGE::NUKI_ITEM_UNIQ::MAX)
+    FORGE::NUKI_ITEM_UNIQ::MAX
+  else
+    false
+  end
 end
 
 #==============================================================================
@@ -35,7 +43,7 @@ module Generic
     #--------------------------------------------------------------------------
     def setup_base(id, list)
       current_item  = list[id]
-      @id           = current_item.id 
+      @id           = current_item.id
       @name         = current_item.name.dup
       @icon_index   = current_item.icon_index
       @description  = current_item.description.dup
@@ -43,7 +51,7 @@ module Generic
       # Clonage un peu plus raffiné des tableaux complexes
       @features     = Array.new(current_item.features.length) do |i|
         current_feature   = current_item.features[i]
-        code              = current_feature.code 
+        code              = current_feature.code
         data_id           = current_feature.data_id
         value             = current_feature.value
         RPG::BaseItem::Feature.new(code, data_id, value)
@@ -137,7 +145,7 @@ class Game_Item < RPG::Item
     @itype_id   = $data_items[id].itype_id
     @price      = $data_items[id].price
     @consumable = $data_items[id].consumable
-  end 
+  end
 end
 
 #==============================================================================
@@ -255,13 +263,13 @@ class Game_Party
     return unless item
     nitm = Item_Config::GROUPED ? item_number(item) : container.length
     newn = nitm + amount
-    if amount > 0 
+    if amount > 0
       nmax  = Item_Config::GROUPED ? max_item_number(item) : Item_Config::MAX
       limit = ([newn, nmax].min) - nitm
       limit.times{container << build_item(item)}
     else
       limit = nitm - ([newn, 0].max)
-      limit.times do 
+      limit.times do
         item_finded = container.find{|elt|elt.id == item.id}
         container.delete(item_finded)
       end
@@ -287,6 +295,6 @@ class Window_ItemList
   # * Affiche le nombre d'objet possédé
   #--------------------------------------------------------------------------
   def draw_item_number(rect, item)
-    itemuniq_draw_nb(rect, item) if Item_Config::GROUPED  
+    itemuniq_draw_nb(rect, item) if Item_Config::GROUPED
   end
 end

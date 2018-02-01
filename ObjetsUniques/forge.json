@@ -1,10 +1,14 @@
 {
   "name": "nuki-item-uniq",
   "description": "Give a proper identity to each RPGMaker's object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "authors": {
     "xvw": "xaviervdw@gmail.com"
   },
-  "components": ["script.rb"]
+  "components": ["script.rb"],
+  "export": [
+    ["grouped", "Display the items grouped", "false"],
+    ["max", "if not grouped, the maximum ammount of object", "999"]
+  ]
 }
