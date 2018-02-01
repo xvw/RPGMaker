@@ -1,0 +1,13 @@
+{
+  "name": "nuki-display-text",
+  "description": "Provide a full customisable text engine",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": {
+    "xvw": "xaviervdw@gmail.com"
+  },
+  "components": ["script.rb"],
+  "deps": {
+    "nuki-standardize-rgss": ["~> 1.0"]
+  }
+}
