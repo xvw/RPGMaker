@@ -1,0 +1,13 @@
+{
+  "name": "nuki-tone-tester",
+  "description": "Provide a InGame tone tester",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": {
+    "xvw": "xaviervdw@gmail.com"
+  },
+  "components": ["script.rb"],
+  "deps": {
+    "nuki-mouse-keyboard": ["~> 1.0"]
+  }
+}
