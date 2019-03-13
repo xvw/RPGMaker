@@ -44,7 +44,7 @@ class TextProfile
       @outline        = val.outline
       @outline_color  = val.outline_color
       @shadow         = val.shadow
-      @multiline      =val.multiline
+      @multiline      = val.multiline
     else
       @size           = Font.default_size
       @font           = Font.default_name
@@ -148,13 +148,13 @@ class Game_Text
   #--------------------------------------------------------------------------
   # * Variables d'instances
   #--------------------------------------------------------------------------
-  attr_reader :number
-  attr_reader :origin 
-  attr_reader :x, :y 
-  attr_reader :zoom_x, :zoom_y
-  attr_reader :opacity
-  attr_reader :angle
-  attr_reader :blend_type
+  attr_accessor :number
+  attr_accessor :origin 
+  attr_accessor :x, :y 
+  attr_accessor :zoom_x, :zoom_y
+  attr_accessor :opacity
+  attr_accessor :angle
+  attr_accessor :blend_type
   attr_accessor :text_value 
   attr_accessor :profile 
   #--------------------------------------------------------------------------
